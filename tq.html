@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HEEZHUN</title>
+    <link href="assgn_reset.css" rel="stylesheet" />
+    <link href="assgn_design.css" rel="stylesheet" />
+    <link href="tq.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="head_cart.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="Logo.png" alt="logo">
+        <span class="top">Shopping Cart</span>
+        <nav>
+            <ul class="nav_bar">
+                <li><a href="#">Home</a></li>
+                <li class="product">
+                    <a href="#">Product</a>
+                    <ul>
+                        <a href="#">Keyboard</a>
+                        <a href="#">Mouse & pad</a>
+                        <a href="#">Audio</a>
+                        <a href="#">Monitor</a>
+                        <a href="#">PC</a>
+                    </ul>
+                </li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li>
+                    <div class="cart_counter"><a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping" id="cart_icon"></i></a></div>
+                    <div class="no_item">0</div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="content_cart">
+                <img src="cvv.png" class="img_item" />
+                <div class="product_info">
+                    <div class="product_name">Computer</div>
+                    <div class="cart_price">RM10.00</div>
+                    <input type="number" value="1" min="1" max="9" class="product_quantity" />
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" />
+            </div>
+        </div>
+    </div>
+    <div class="tq">
+        <p>You has been submitted your order</p>
+        <p>Thank you</p>
+    </div>
+    <audio autoplay loop>
+           <source src="tq_mz.ogg" type="audio/ogg">
+           <source src="tq_mz.mp3" type="audio/mp3">
+           <h3>Unfortunately</h3>
+           <p>Your browser is old version</p>
+           <p>Please upgrade your browser to support HTML5</p>
+       </audio>
+</body>
+
+</html>

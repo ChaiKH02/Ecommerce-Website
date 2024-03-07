@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+:root
+{
+    --blue: #46517a;
+}
+
+/*content*/
+body {
+    background-image: url(background.png);
+    width: 95%;
+    min-width:800;
+    max-width:1000px;
+    margin: 0px auto; 
+    font-family: "Poppins.", sans-serif;
+    line-height: 1;
+    background-color: #9075D8;
+}
+
+#h1.title 
+{
+    position: absolute;
+    top: 100px;
+    z-index: 0;
+}
+
+img#aboutbg
+{
+    display: block;
+    width: 100%;
+    opacity: 0.3; 
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h1#title
+{
+    font-size: 3em;
+    font-family: "Bahnschrift";
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+article.about
+{
+    margin-top: 6.5em;
+    max-width: 100%;
+    margin: 2em 4em;
+    display: flex;
+    flex: 0 1 200px;
+    gap: 2em;
+}
+.intro, .history
+{
+    font-family: "Bahnschrift";
+    padding: 2em 2em;
+    box-shadow: 2px 5.5px 10px rgba(0,0,0,.5);
+}
+
+.intro img
+{
+    width: 95px;
+}
+.history img
+{
+    width: 87px;
+}
+
+.intro h2, .history h2
+{
+    font-size: 2em;
+    color: var(--blue);
+}
+
+p#intro, p#history
+{
+    text-align: justify;
+    font-size: 1.3em;
+    line-height: 2em;
+}
+
+article#reason
+{
+    max-width: 100%;
+    font-family: "Bahnschrift";
+    margin: 2em 5em;
+}
+article#reason h2
+{
+    font-size: 2em;
+    color: var(--blue);
+}
+
+article#reason p
+{
+    text-align: justify;
+    font-size: 1.3em;
+    line-height: 2em;
+}
+
+article.reason
+{
+    max-width: 100%;
+    display: grid;
+    margin: 0em 4em 2em 4em;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+article.reason h3
+{
+    color: var(--blue);
+    font-size: 1.3em;
+}
+
+.stumbling, .quality, .satu
+{
+    font-family: "Bahnschrift";
+    padding: 0 1.5em;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 2em;
+    box-shadow: 2px 5.5px 10px rgba(0,0,0,.5);
+}
+
+
+.words
+{
+    max-width: 100%;
+    font-family: "Bahnschrift";
+    margin: 2em 4em;
+}
+
+.words h2
+{
+    text-align: center;
+    font-size: 2em;
+    color: var(--blue);
+}
+
+.words p
+{
+    font-size: 1.3em;
+    line-height: 2em;
+    text-align: justify;
+    quotes: "\201C" "\201D";
+}
+
+.words p::before
+{
+    content: open-quote;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.words p::after
+{
+    content: close-quote;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+img#founders
+{
+    display: block;
+    position: relative;
+    width: 65%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3#title
+{
+    text-align: center;
+    font-size: 3em;
+    font-family: "Bahnschrift";
+    position: relative;
+    
+}
+
+.vid
+{
+    text-align: center;
+    padding: 3em;
+}
+
+.vid video
+{
+    width: 70%;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+    .about {
+        flex-flow: row wrap;
+    }
+
+    .intro {
+        width: 100%;
+    }
+    .history {
+        width: 100%;
+    }
+}

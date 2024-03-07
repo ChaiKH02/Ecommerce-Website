@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN TECH</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assgn_design.css">
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="currentUserEmail.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1></h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="web(updated)/web/RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="web(updated)/web/RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="web(updated)/web/RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="#">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="#">Monitor</a>
+                <a href="#">PC</a>
+            </ul>
+        </li>
+        <li><a href="specialpromo.html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1></h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="#">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+    <!-- (A) AUDIO TAG -->
+    <audio src="img/image_homepage/1.mp3" id="bgm" autoplay></audio>
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+
+    <script>
+        // (B) GET AUDIO TAG + DEFINE PLAYLIST
+        let audio = document.getElementById("bgm");
+        playlist = ["img/image_homepage/1.mp3", "img/image_homepage/2.mp3", "img/image_homepage/3.mp3"];
+        current = 0;
+
+        // (C) AUTO LOAD NEXT SONG
+        audio.onended = () => {
+            current++;
+            if (current >= playlist.length) {
+                current = 0;
+            }
+            audio.src = playlist[current];
+            audio.pause();
+            audio.load();
+            audio.play();
+        };
+        audio.volume = 0.3;
+    </script>
+    <button class="open-button" onclick="openForm()"><i class="far fa-comment-dots" id=chat-icon ></i></button>
+    <div class="pop-up-chat" id="liveChat">
+        <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/32af636c-f615-43bd-b593-16d6ecc0608a">
+                </iframe>
+    </div>
+    <script>
+        function openForm() {
+            var form = document.getElementById("liveChat");
+            if (form.style.display == "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <a href="pc.html">
+                <img src="img/image_homepage/pc_poster.png" style="width:100%">
+            </a>
+        </div>
+        <div class="mySlides fade">
+            <a href="audio.html">
+                <img src="img/image_homepage/Speaker poster.png" style="width:100%">
+            </a>
+        </div>
+        <div class="mySlides fade">
+            <a href="keyboard.html">
+                <img src="img/image_homepage/keyboard_poster.png" style="width:100%">
+            </a>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <div class="ourDifference">
+        <h1>O<span>ur</span> Dif<span>fe</span>rence</h1>
+        <br/>
+        <img src="img/image_homepage/Difference.jpg" alt="Our Difference" width=300 height=500>
+        <article class="description">
+            <h1>
+                WE PROVIDE <br/>EVERYTHING YOU NEED
+            </h1>
+            <br/>
+            <p>With over a decade of experience,we've provided a lot of technology products that are affordable. At the meantime, we have also listed full details on Pros and Cons of our product.Adhering to our business philosophy, we are also honorably
+                cooperating with MDEC.</p>
+            <br/>
+            <div><span style="font-weight:600;font-size: 20px;">Reviews</span>
+                <div class="rate">98%</div>
+            </div>
+            <br/>
+            <div class="bar">
+                <div class="reviewsRate"></div>
+            </div>
+            <div><span style="font-weight:600;font-size: 20px;">Wide Selection</span>
+                <div class="rate">100%</div>
+            </div>
+            <br/>
+            <div class="bar">
+                <div class="wideSelectRate"></div>
+            </div>
+            <div><span style="font-weight:600;font-size: 20px;">High Quality and Speedy Performance</span>
+                <div class="rate">99%</div>
+            </div>
+            <br/>
+            <div class="bar">
+                <div class="performanceRate"></div>
+            </div>
+        </article>
+    </div>
+    <div class="viewProduct">
+        <br/>
+        <h1>V<span>ie</span>w <span>O</span>ur Pr<span>od</span>uct</h1>
+        <br/>
+        <p>Click to explore our product</p>
+        <div class="view">
+            <div class="viewLeft">
+                <h2>Explore Our<br/>Product To Set Up Your PC</h2>
+            </div>
+            <div class="viewButton">
+                <a href="product.html">View Product</a>
+            </div>
+        </div>
+        <div class="viewMap">
+            <img src="img/image_homepage/pc.png" alt="deviceMap" usemap="#productMap" width=488 height=490/>
+            <map name="productMap" id="productMap">
+                    <area shape="poly" coords="0,32,250,53,259,258,0,278,0,31" href="monitor.html" alt="monitor"/>
+                    <area shape="poly" coords="0,429,243,392,264,418,289,448,290,456,122,489,0,489" href="keyboard.html" alt="keyboard"/>
+                    <area shape="poly" coords="220,369,230,357,257,349,272,348,292,335,304,331,328,322,356,331,366,352,364,372,353,388,339,397,324,411,307,415,281,408,271,395,252,398,245,391,223,393" href="audio.html" alt="audio"/>
+                    <area shape="poly" coords="309,100,486,22,487,431,364,376,366,356,362,339,350,325,323,321,312,324" href="pc.html" alt="pc"/>
+                    <area shape="poly" coords="329,436,347,462,370,474,392,472,408,458,398,436,382,421,359,419,348,421,333,430" href="mousenpad.html" alt="mousenpad"/>
+                    <area shape="default" coords="0,0,588,590" href="home.html"/>
+                </map>
+        </div>
+        <div class="monitor">
+            <a href="monitor.html">
+                <img src="img/image_homepage/monitor.jpg" alt="Catogory_monitor" width=225 height=150/>
+            </a>
+            <div class="productText1">
+                Monitor
+            </div>
+        </div>
+        <div class="cpu">
+            <a href="pc.html">
+                <img src="img/image_homepage/cpu.jpg" alt="Catogory_cpu" width=225 height=150/>
+            </a>
+            <div class="productText2">
+                PC
+            </div>
+        </div>
+        <div class="keyboard">
+            <a href="keyboard.html"><img src="img/image_homepage/keyboard.jpg" alt="Catogory_keyboard" width=225 height=150/> </a>
+            <div class="productText3">
+                Keyboard
+            </div>
+        </div>
+        <div class="audio">
+            <a href="audio.html"><img src="img/image_homepage/audio.jpg" alt="Catogory_audio" width=225 height=150/></a>
+            <div class="productText4">
+                Audio
+            </div>
+        </div>
+        <div class="mouse_pad">
+            <a href="mousenpad.html"><img src="img/image_homepage/mouse_pad.jpg" alt="Catogory_mouse_pad" width=225 height=142/></a>
+            <div class="productText5">
+                Mouse & Pad
+            </div>
+        </div>
+    </div>
+
+    <div class="performance">
+        <table id="comPerformance">
+            <tr>
+                <td><img src="img/image_homepage/online-shopping.png" alt="sales" /></td>
+                <td><img src="img/image_homepage/rating.png" alt="cusSatisfaction" /></td>
+                <td><img src="img/image_homepage/fast.png" alt="response" /></td>
+                <td><img src="img/image_homepage/delivery-truck.png" alt="delivery" width=74 height=74/></td>
+            </tr>
+            <tr>
+                <td>1,000<sub>+</sub></td>
+                <td>99<sub>%</sub></td>
+                <td>100<sub>%</sub></td>
+                <td>1 <span style="font-size:large">month</span></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>Sales per Month</td>
+                    <td>Customer Satisfaction</td>
+                    <td>Response Rate</td>
+                    <td>Delivery Time</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="contact">
+        <img src="img/image_homepage/office.jpg" alt="office" style="width:100%" />
+        <div class="contactLeft">
+            <h1>DON'T <span>LAT</span>E, CONTACT US <br/>FOR FURTHER INFO<span>MAT</span>ION</h1>
+        </div>
+        <div class="contactButton">
+            <a href="contactUs.html">Contact Us Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_2div">
+            <div class="contactInfo">
+                <h3>
+                    CONTACT INFO
+                </h3>
+                <hr/>
+                <ul>
+                    <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                    <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                    <li style="list-style-image: url('img/footer image/location.png');">
+                        <address>
+                            43-1,Jalan Indah,Taman Indah,45400,Selangor
+                            </address>
+                        <br/>
+                    </li>
+                </ul>
+                <div class="socialMedia">
+                    <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                        <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                        <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                        <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                        <br/>Share and Follow Us!
+                    </div>
+                </div>
+            </div>
+            <div class="quickLink">
+                <h3>QUICK LINK</h3>
+                <hr/>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="Special_Promotions.html">Special Promo</a></li>
+                        <li><a href="Faq.html">FAQ</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="footLogo">
+                <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+            </div>
+            <p class="term">&nbsp;&nbsp;&nbsp;&nbsp; &#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

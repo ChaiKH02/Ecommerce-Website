@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RegisterLogin.css">
+    <script src="RegisterLogin.js"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <img src="img/logo/Logo.png" class="logo" alt="">
+    <div class="two_part">
+
+        <form id="register">
+            <div class="register_container">
+                <h2>Register Form</h2>
+
+                <label for="R-email">User Name</label>
+
+                <input type="text" placeholder="Enter User Name" name="R-email" id="R-email" required>
+
+
+                <label for="R-psw">Password</label>
+
+                <input type="password" placeholder="Enter Password" name="R-psw" id="R-psw" required>
+
+
+                <label for="R-psw-repeat">Repeat Password</label>
+
+                <input type="password" placeholder="Repeat Password" name="R-psw-repeat" id="R-psw-repeat" required>
+
+
+                <button type="submit" class="registerbtn" onclick="registerAcc()">Register</button>
+
+
+
+
+            </div>
+        </form>
+        <form id="login">
+            <div class="login_container">
+                <h2>Login Form</h2>
+
+
+                <label for="L-email">User Name</label>
+
+                <input type="text" placeholder="Enter Usesr Name" name="L-email" id="L-email">
+
+
+                <label for="L-psw">Password</label>
+
+                <input type="password" placeholder="Enter Password" name="L-psw" id="L-psw" required>
+
+
+                <button type="submit" class="loginbtn" onclick="loginAcc()">Login</button>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

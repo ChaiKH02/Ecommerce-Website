@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN TECH</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="assgn_design.css" rel="stylesheet">
+    <link href="productPC.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="productPC.js" defer></script>
+    <script src="currentUserEmail.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+    <script src="removeCart2.js" defer></script>
+
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>PC</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>PC</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+    <div class="wrapper">
+        <!-- search product -->
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here..">
+            <button id="search" onclick="searchFilter()">Search</button>
+        </div>
+
+        <!-- filter button -->
+        <!-- filter button -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">ALL</button>
+            <button class="btn" onclick="filterSelection('business')">BUSINESS</button>
+            <button class="btn" onclick="filterSelection('gaming')">GAMING</button>
+            <button class="btn" onclick="filterSelection('mini desktop')">MINI DESKTOP</button>
+            <p>VIEW AS :</p>
+            <button class="btnS" onclick="priceHighToLow('High To Low')">High To Low</button>
+            <button class="btnS" onclick="priceLowToHigh('Low To High')">Low To High</button>
+        </div>
+
+        <!-- display products here -->
+        <div id="products_list">
+
+            <div class="products business">
+                <img src="img/product_pc/Business/Dell OptiPlex 3050 Micro.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell OptiPlex 3050 Micro</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1799.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU:  <br>
+                            Graphics: Intel HD Graphics<br>
+                            RAM: 4GB <br>
+                            Storage: 500GB HDD <br>
+                            Connectivity: Gigabit Ethernet <br>
+                            Dimensions (W x D x H): 18.2 x 3.6 x 17.8 cm
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell OptiPlex 3050 Micro','1799.00','img/product_pc/Business/Dell OptiPlex 3050 Micro.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/Dell_Optiplex_3020-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell Optiplex 3020</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1491.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Intel Core i3 4160 <br>
+                            Graphics: Intel HD Graphics 4400<br>
+                            RAM: 4GB <br>
+                            Storage: 500GB HDD <br>
+                            Connectivity: Gigabit Ethernet <br>
+                            Dimensions (W x D x H): 9 x 31 x 29cm
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell Optiplex 3020','1491.00','img/product_pc/Business/Dell_Optiplex_3020-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/HP_Elite_Slice_for_Meeting_Rooms-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>HP Elite Slice for Meeting Rooms</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2991.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Intel Core i5-6500T <br>
+                            Graphics: Intel HD Graphics<br>
+                            RAM: 8GB <br>
+                            Storage: 256GB SSD <br>
+                            Connectivity: Gigabit Ethernet <br>
+                            Dimensions (W x D x H): 16.5 x 3.5 x 16.5 cm
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('HP Elite Slice for Meeting Rooms','2991.00','img/product_pc/Business/HP_Elite_Slice_for_Meeting_Rooms-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/Dell_OptiPlex_7080-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell OptiPlex 7080</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4751.51</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: 10th Core i5-10500 <br>
+                            Graphics: Nvdia GT 730<br>
+                            RAM: 8GB <br>
+                            Storage: 500GB HDD <br>
+                            Connectivity: USB-A 2.0, USB-A 3.2, USB-C 3.2, DisplayPort 1.4 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell OptiPlex 7080','4751.51','img/product_pc/Business/Dell_OptiPlex_7080-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/Dell_XPS_8940-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell XPS 8940</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4149.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: 11th Core i5-11400  <br>
+                            Graphics: Nvdia GT 730<br>
+                            RAM: 8GB <br>
+                            Storage: 1TB HDD <br>
+                            Connectivity: USB-A 2.0, USB-A 3.1, USB-C 3.2, HDMI 1.4, DisplayPort 1.4 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell XPS 8940','4149.00','img/product_pc/Business/Dell_XPS_8940-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/Lenovo_ThinkCentre_M715_Tiny-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Lenovo ThinkCentre M715 Tiny</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2999.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: AMD's Ryzen 5 Pro 2400 GE quad-core<br>
+                            Graphics: Nvdia GT 730<br>
+                            RAM: from 8GB to 32GB <br>
+                            Storage: 1TB HDD <br>
+                            Connectivity: USB-A 2.0, USB-A 3.1, SATA SSD
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Lenovo ThinkCentre M715 Tiny','2999.99','img/product_pc/Business/Lenovo_ThinkCentre_M715_Tiny-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products business">
+                <img src="img/product_pc/Business/HP_Slim_S01-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>HP Slim S01</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1499.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: 10th-gen Intel Core i3-10100 processor<br>
+                            Graphics:  Intel UHD for graphics<br>
+                            RAM: from 8GB to 32GB <br>
+                            Storage: 1TB HDD or 128GB PCIe NVMe SSD<br>
+                            Connectivity: HDMI, VGA, and USB-A 3.0 and 2.0 but no USB-C
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('HP Slim S01','1499.99','img/product_pc/Business/HP_Slim_S01-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Corsair_Vengeance_i7200-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Corsair Vengeance i7200</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4699.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to Intel Core i9-10850K/AMD Ryzen 9 5900X<br>
+                            Graphics:  Up to Nvidia GeForce RTX 3090<br>
+                            RAM: up to 64GB <br>
+                            Storage: Up to two 2 TB SSDs<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Corsair Vengeance i7200','4699.99','img/product_pc/gaming/Corsair_Vengeance_i7200-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Acer_Predator_Orion_3000-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Acer Predator Orion 3000</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">5249.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to Intel Core i7 <br>
+                            Graphics:  Up to Nvidia GeForce RTX 3070 Ti<br>
+                            RAM: 16GB <br>
+                            Storage: Up to 1 TB SSDs, 1 TB HDD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Acer Predator Orion 3000','5249.00','img/product_pc/gaming/Acer_Predator_Orion_3000-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Maingear_Turbo-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Maingear Turbo</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">8999.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to AMD Ryzen 9 5950X <br>
+                            Graphics: Up to Nvidia GeForce RTX 3090<br>
+                            RAM: 16GB <br>
+                            Storage: Up to 2TB SSD x 3<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Maingear Turbo','8999.99','img/product_pc/gaming/Maingear_Turbo-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Corsair_One_i300-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Corsair One i300</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">8512.12</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Intel i9-12900K<br>
+                            Graphics: Up to Nvidia GeForce RTX 3080 Ti<br>
+                            RAM: Up to 64GB <br>
+                            Storage: Up to 2 TB SSD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Corsair One i300','8512.12','img/product_pc/gaming/Corsair_One_i300-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Alienware_Aurora_Ryzen_Edition_R10-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Alienware Aurora Ryzen Edition R10</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">8999.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: AMD Ryzen 9 5950X<br>
+                            Graphics: AMD Radeon 6800 XT<br>
+                            RAM: Up to 128GB <br>
+                            Storage: Up to 2 TB SSD + 2 TB HDD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Alienware Aurora Ryzen Edition R100','8999.00','img/product_pc/gaming/Alienware_Aurora_Ryzen_Edition_R10-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/MSI MEG Trident X.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>MSI MEG Trident X</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">8199.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to Intel Core i9-10900K, 3.7-5.3 GHz<br>
+                            Graphics: Up to Nvidia GeForce RTX 2080 Ti<br>
+                            RAM: Up to 128GB <br>
+                            Storage: Up to 1 TB SSD + 1 TB HDD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('MSI MEG Trident X','8199.00','img/product_pc/gaming/MSI MEG Trident X.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/HP_Omen_30L_Gaming_Desktop-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>HP Omen 30L Gaming Desktop</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">11330.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to 10th Gen Intel Core i9-10900K<br>
+                            Graphics: Up to Nvidia GeForce RTX 3090<br>
+                            RAM: Up to 64GB <br>
+                            Storage: Up to 2 TB SSD + 2 TB HDD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('HP Omen 30L Gaming Desktop','11330.00','img/product_pc/gaming/HP_Omen_30L_Gaming_Desktop-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_pc/gaming/Dell_XPS_8940-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell XPS 8940</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4149.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU: Up to 10th Gen Intel Core i9-10900K<br>
+                            Graphics: Up to Nvidia GeForce RTX 3070<br>
+                            RAM: Up to 128GB <br>
+                            Storage: Up to 2 TB SSD + 2 TB HDD<br>
+                            VR Ready: Yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell XPS 8940','4149.00','img/product_pc/gaming/Dell_XPS_8940-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products mini_desktop">
+                <img src="img/product_pc/Mini Desktop/Azulle_Access3-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Azulle Access3</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">471.50</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU : Intel Celeron N4100<br>
+                            Size (Inches): 5.5 x 2.36 x 0.76<br>
+                            Storage: 32GB<br>
+                            Weight: 5.12 pounds<br>
+                            Geekbench 4 Score: 4,541
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Azulle Access3','471.50','img/product_pc/Mini Desktop/Azulle_Access3-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products mini_desktop">
+                <img src="img/product_pc/Mini Desktop/Intel_Hades_Canyon_NUC-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Intel Hades Canyon NUC</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4000.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU : Intel Core i7-8009G/AMD Radeon RX Vega M GH<br>
+                            Size (Inches): 8.7 x 5.6 x 1.5<br>
+                            Storage: Bring Your Own<br>
+                            Weight: 4.75 pounds
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Intel Hades Canyon NUC','4000.00','img/product_pc/Mini Desktop/Intel_Hades_Canyon_NUC-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products mini_desktop">
+                <img src="img/product_pc/Mini Desktop/Intel_NUC_9_Pro-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Intel NUC 9 Pro</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4802.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU : Intel Xeon E-2286M<br>
+                            Size (Inches): 9.4 x 8.5 x 3.8<br>
+                            Storage: 1TB SSD<br>
+                            Weight: 4.1 pounds <br>
+                            Geekbench 5 Score: 7,985
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Intel NUC 9 Pro','4802.00','img/product_pc/Mini Desktop/Intel_NUC_9_Pro-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products mini_desktop">
+                <img src="img/product_pc/Mini Desktop/Dell_OptiPlex_7070_Ultra-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell OptiPlex 7070 Ultra</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2978.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU : Intel Core i7-8665U<br>
+                            Size (Inches): 10.08 x 3.78 by 1.1<br>
+                            Storage: 512GB SSD<br>
+                            Weight: 1.16 pounds <br>
+                            Geekbench 4 Score: 16,684
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell OptiPlex 7070 Ultra','2978.00','img/product_pc/Mini Desktop/Dell_OptiPlex_7070_Ultra-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products mini_desktop">
+                <img src="img/product_pc/Mini Desktop/Acer Chromebox CXI3.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Acer Chromebox CXI3</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1899.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            CPU : Intel Core i5-8250U<br>
+                            Size (Inches): 5.9 x 5.9 x 1.6<br>
+                            Storage: 64GB SSD<br>
+                            Weight: 1.2 pounds 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Acer Chromebox CXI3','1899.00','img/product_pc/Mini Desktop/Acer Chromebox CXI3.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="productKeyboard.html">Product</a></li>
+                    <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+</html>

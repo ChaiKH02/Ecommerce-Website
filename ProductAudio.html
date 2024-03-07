@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN TECH</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="assgn_design.css" rel="stylesheet">
+    <link href="ProductAudio.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+
+    <script src="currentUserEmail.js" defer></script>
+    <script src="ProductAudio.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+    <script src="removeCart2.js" defer></script>
+
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>AUDIO</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="specialpromo.html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>AUDIO</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+    <div class="wrapper">
+        <!-- search product -->
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here..">
+            <button id="search" onclick="searchFilter()">Search</button>
+        </div>
+
+        <!-- filter button -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">ALL</button>
+            <button class="btn" onclick="filterSelection('wire')">WIRE</button>
+            <button class="btn" onclick="filterSelection('wireless')">WIRELESS</button>
+            <button class="btn" onclick="filterSelection('soundbar')">SOUNDBAR</button>
+            <button class="btn" onclick="filterSelection('speaker')">SPEAKER</button>
+            <button class="btn" onclick="filterSelection('headset')">HEADSET</button>
+            <p>VIEW AS :</p>
+            <button class="btnS" onclick="priceHighToLow('High To Low')">High To Low</button>
+            <button class="btnS" onclick="priceLowToHigh('Low To High')">Low To High</button>
+        </div>
+
+        <!-- display products here -->
+        <div id="products_list">
+            <div class="wireless products headset">
+                <img src="img/product_audio/headset/Logitech G Pro X Wireless.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Logitech G Pro X Wireless
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">807.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Interface: Wireless<br>
+                            Features: up to 20h battery life, Detachable mic with foam windscreen, 1.8m USB A to USB C charging cable
+
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Logitech G Pro X Wireless', '807.00','img/product_audio/headset/Logitech G Pro X Wireless.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless products soundbar">
+                <img src="img/product_audio/soundbar/Dell_Pro_Stereo_Soundbar_AE515M-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell Pro Stereo Soundbar AE515M</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">299.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Audio Output Mode: stereo x2 - 2.5 watt <br> Connectivity: wireless<br> Product Dimensiions: 17.44 x 2.38 x 1.38 inches<br> Power output: 5 watt
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell Pro Stereo Soundbar AE515M', '299.99','img/product_audio/soundbar/Dell_Pro_Stereo_Soundbar_AE515M-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="wireless wire products soundbar">
+                <img src="img/product_audio/soundbar/Anker_Nebula_Soundbar-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Anker Nebula Soundbar</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">369.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            2.1 Channel, Built-In Subwoofers, Voice Remote with Alexa <br>
+                            Connectivity: HDMI, Optical, Bluetooth, USB<br> Product Dimensiions: 36.22 x 4.33 x 2.36 inches<br> Power Output: 100W
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Anker Nebula Soundbar', '369.00','img/product_audio/soundbar/Anker_Nebula_Soundbar-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless wire products soundbar">
+                <img src="img/product_audio/soundbar/Creative_Stage_Soundbar-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Creative Stage Soundbar</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">163.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Remote Control and Wall Mounting Kit<br>
+                            Connectivity: Bluetooth, 3. 5mm aux-in, optical Audio input, TV (ARC), and USB MP3<br> Product Dimensiions: 23.7 x 6.69 x 16.06 inches<br> Power Output: 160W peak power
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Anker Nebula Soundbar', '163.00','img/product_audio/soundbar/Creative_Stage_Soundbar-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless products soundbar">
+                <img src="img/product_audio/soundbar/Razer_Leviathan_Soundbar-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer Leviathan Soundbar</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">229.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Power Source: AC<br>
+                            Connectivity: Wireless<br> Product Dimensiions: 3.1 x 19.7 x 2.9 inches<br> Power Output: 30W
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer Leviathan Soundbar', '229.00','img/product_audio/soundbar/Razer_Leviathan_Soundbar-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless wire products soundbar">
+                <img src="img/product_audio/soundbar/Panasonic_SoundSlayer_Gaming_Soundbar-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Panasonic SoundSlayer Gaming Soundbar</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">369.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Connectivity: wireless, HDMI<br> Product Dimensiions: 18.5 x 7.5 x 2.5 inches<br> Power source: Corded Electric
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Panasonic SoundSlayer Gaming Soundbar', '369.00','img/product_audio/soundbar/Panasonic_SoundSlayer_Gaming_Soundbar-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless wire products soundbar">
+                <img src="img/product_audio/soundbar/Creative_Sound_BlasterX_Katana_Soundbar-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Creative Sound BlasterX Katana Soundbar</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">169.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Bluetooth, AUX-in, Headset out, USB Audio<br> Product Dimensiions: 61 x 600 x 79 mm<br> Power Output: 150W peak power
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Creative Sound BlasterX Katana Soundbar', '160.00','img/product_audio/soundbar/Creative_Sound_BlasterX_Katana_Soundbar-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless products speaker">
+                <img src="img/product_audio/speaker/Audioengine_A5+_Plus_Wireless_Speaker-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Audioengine A5+ Plus Wireless Speaker</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2299.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Bluetooth aptX, Analog Input/Output<br> Product Dimensiions: 9 x 7 x 10.75 inches<br> Power Output: 150W peak power
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Audioengine A5+ Plus Wireless Speaker', '2299.00','img/product_audio/speaker/Audioengine_A5+_Plus_Wireless_Speaker-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="wireless wire products speaker">
+                <img src="img/product_audio/speaker/House_of_Marley_Get_Together_Duo-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>House of Marley Get Together Duo</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">508.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Bluetooth, USB <br> Product Dimensiions: 5.12 x 4.13 x 7.91 inches
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('House of Marley Get Together Duo', '508.00','img/product_audio/speaker/House_of_Marley_Get_Together_Duo-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wire products headset">
+                <img src="img/product_audio/headset/HyperX_Cloud_Alpha-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>HyperX Cloud Alpha
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">191.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Interface: Wired (3.5mm)<br>
+                            Features: Dual-Chamber drivers, removable mic, Discord Certified audio, detachable cable
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('HyperX Cloud Alpha', '191.00','img/product_audio/headset/HyperX_Cloud_Alpha-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="wire products speaker">
+                <img src="img/product_audio/speaker/Pioneer_DJ_Studio_Monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Pioneer DJ Studio Monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">754.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Power cable, HDMI<br> Product Dimensiions: 11.3 x 13.74 x 16.73 inches<br> Power Supply: AC 100-240 V, 50 Hz / 60Hz<br>Frequency Range 40 Hz - 36 kHz Hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Pioneer DJ Studio Monitor', '754.00','img/product_audio/speaker/Pioneer_DJ_Studio_Monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless products speaker">
+                <img src="img/product_audio/speaker/Logitech_Z407_Bluetooth_Computer_Speakers-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Logitech Z407 Bluetooth Computer Speakers</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">320.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Bluetooth<br> Product Dimensiions: 13.39 x 8.27 x 10.75 inches<br> Power Output: 80watt
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Logitech Z407 Bluetooth Computer Speakers', '320.00','img/product_audio/speaker/Logitech_Z407_Bluetooth_Computer_Speakers-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wire products speaker">
+                <img src="img/product_audio/speaker/Creative_Pebble_2.0_USB-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Creative Pebble 2.0 USB</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">148.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: USB<br> Product Dimensiions: 9.57 x 4.96 x 4.96 inches
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Creative Pebble 2.0 USB', '148.00','img/product_audio/speaker/Creative_Pebble_2.0_USB-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wireless products speaker">
+                <img src="img/product_audio/speaker/Audioengine_A1-MR_Multiroom_Home_Music_System-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Audioengine A1-MR Multiroom Home Music System
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1148.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: Bluetooth, wireless, wifi streaming<br> Product Dimensiions: 5.25 x 4 x 6 inchess<br> Power Output: 60W peak power <br> Input Voltages: 110 - 240V
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Audioengine A1-MR Multiroom Home Music System', '1148.00','img/product_audio/speaker/Audioengine_A1-MR_Multiroom_Home_Music_System-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="wireless products speaker">
+                <img src="img/product_audio/speaker/RAZER_Leviathan-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>RAZER Leviathan</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1054.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: wireless<br> Product Dimensiions: 3.1 x 19.7 x 2.9 inches<br> Power Source: AC<br>
+                            Frequency Response-180 Hz - 20 KHz 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('RAZER Leviathan', '1054.00','img/product_audio/speaker/RAZER_Leviathan-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="wireless products headset">
+                <img src="img/product_audio/headset/Razer_BlackShark_V2_Pro-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer BlackShark V2 Pro
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">348.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Interface: 2.4GHz USB wireless, 3.5mm audio jack <br>
+Features: THX Spatial Audio, noise cancellation, TriForce Titanium 50mm drivers, removable HyperClear Supercardioid mic
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer BlackShark V2 Pro', '348.00','img/product_audio/headset/Razer_BlackShark_V2_Pro-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wire products speaker">
+                <img src="img/product_audio/speaker/Klipsch_The_Fives_Powered_Speaker_System-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Klipsch The Fives Powered Speaker System
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">3699.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Connectivity: HDMI<br> Product Dimensiions: 9.3 x 6.5 x 12 inches
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Klipsch The Fives Powered Speaker System', '3699.00','img/product_audio/speaker/Klipsch_The_Fives_Powered_Speaker_System-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="wireless wire products headset">
+                <img src="img/product_audio/headset/Corsair_HS80_RGB_Wireless-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Corsair HS80 RGB Wireless
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">499.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Interface: Wireless / Wired (USB) <br>
+                            Features: Dolby Atmos, 20 hour battery life, 60-foot rang, custom-tuned 50mm high density neodymium audio drivers iCUE RGB lighting control
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Corsair HS80 RGB Wireless', '499.00','img/product_audio/headset/Corsair_HS80_RGB_Wireless-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="wire products headset">
+                <img src="img/product_audio/headset/Razer_Kraken_V3_HyperSense-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer Kraken V3 HyperSense
+                        </strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">359.00</small>
+                        <small>
+                            <br>Specifications:<br>
+                            Interface: Wired (USB)<br>
+                            Features: Haptic bass response, TriForce Titanium 50mm drivers
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer Kraken V3 HyperSense', '359.00','img/product_audio/headset/Razer_Kraken_V3_HyperSense-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="productKeyboard.html">Product</a></li>
+                    <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+
+</html>

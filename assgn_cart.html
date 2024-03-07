@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN</title>
+    <link rel="shortcut icon" href="Logo.png">
+    <link href="reset.css" rel="stylesheet" type="text" />
+    <link href="assgn_design.css" rel="stylesheet" />
+    <link href="assgn_design2.css" rel="stylesheet" />
+
+    <script src="currentUserEmail.js" defer></script>
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="head_cart.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="cart_list.js" defer></script>
+    <script src="removeCart.js" defer></script>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>CART</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="specialpromo.html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>CART</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0.00</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+    <div class="container">
+        <table class="Ptable">
+            <thead>
+                <tr>
+                    <th class="title_Ptable">Product</th>
+                    <th class="title_Ptable">Quantity</th>
+                    <th class="title_Ptable">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody class="products_table">
+
+            </tbody>
+        </table>
+        <div class="total_amount">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Cart Total</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <a><input type="button" class="checkout" value="Proceed to Checkout" /></a>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td class="right subtotal">RM00.00</td>
+                    </tr>
+                    <tr>
+                        <td>Taxes (6%)</td>
+                        <td class="right taxes">RM0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td class="right total">RM0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="#">
+            <p class="back2product">Continue to Shop</p>
+        </a>
+    </div>
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="Special_Promotions.html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+</html>

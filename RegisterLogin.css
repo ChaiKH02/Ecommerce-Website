@@ -1,0 +1,129 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Bahnschrift";
+    src: url('bahnschrift.ttf') format('truetype'), url('bahnschrift.woff') format('woff');
+}
+
+:root {
+    --blue: #46517a;
+    --yellow: #f4de8c;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, /*#20263e,#47438e,#6248a1*/
+    #2b0e4f, #7732a6);
+    line-height: 1;
+    width: 95%;
+    min-width: 800;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+form {
+    font-size: 1.5em;
+    margin-left: 40%;
+    font-family: Bahnschrift;
+}
+
+p {
+    display: table-row;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+}
+
+.two_part {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    line-height: 1;
+    margin: 0 auto;
+    position: relative;
+}
+
+.two_part form {
+    margin-top: 50px;
+    background-color: #46517a;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px black;
+    width: 300px;
+    max-height: fit-content;
+}
+
+.two_part form label {
+    display: flex;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin: 0px 45%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.two_part form label,
+.two_part form input {
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.two_part form input {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
+h2,
+.two_part form label,
+.two_part form input {
+    margin-left: 25px;
+}
+
+.loginbtn,
+.registerbtn {
+    margin: 0px 25px;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 10px solid purple;
+    box-shadow: 10px 10px 5px black;
+}
+
+.loginbtn:hover,
+.registerbtn:hover {
+    box-shadow: none;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+@media (max-width: 800px) {
+    .two_part {
+        display: flex;
+        flex-direction: column;
+    }
+    h2,
+    .two_part form label,
+    .two_part form input {
+        margin-left: 10px;
+    }
+    .two_part form {
+        margin: 0px auto;
+        margin-top: 30px;
+        background-color: #46517a;
+        border-radius: 20px;
+        box-shadow: 20px 20px 30px black;
+        width: 300px;
+        margin-bottom: 30px;
+    }
+    .logo {
+        width: 50%;
+        height: 50%;
+        margin: 0px auto;
+    }
+}

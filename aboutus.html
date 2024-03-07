@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style2.css" rel="stylesheet">
+    <link href="assgn_design.css" rel="stylesheet">
+    <link href="aboutus.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+
+    <script src="currentUserEmail.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+    <script src="removeCart2.js" defer></script>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>About Us</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="memberperks.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.css">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>KEYBOARD</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </div>
+    </section>
+    <div class="title">
+        <img src="Img/aboutus/aboutbg.png" alt="" id="aboutbg" />
+        <h1 id="title">ABOUT US</h1>
+    </div>
+    <article class="about">
+        <div class="intro">
+            <img src="Img/aboutus/Comp.png" alt="" />
+            <h2>Introduction</h2>
+            <p id="intro">The name <strong style="color: #1239c5;">HEEZHUN TECH</strong> is the product of merging the names of our founders — Soon Hui, Pei Yee, Mun Chun and Kian Hun. All the founders share but one common interest — Gaming, as long as gaming is hugely
+                popular with children and young people and gaming is still one of the top activities enjoyed by 5-18 years old online, with many of them gaming via mobile device, PC or using their games console. <strong style="color: #1239c5;">HEEZHUN TECH</strong>                , is mainly designed forr building a PC to let our buyer enjoy it by gaming, education, work and more.
+            </p>
+        </div>
+        <div class="history">
+            <img src="Img/aboutus/Comp3.png" alt="" />
+            <h2>History</h2>
+            <p id="history">The history of <strong style="color: #1239c5;">HEEZHUN TECH</strong> is neither complex nor a long one as it started with a university assignment that involved all of the founders of this business. Soon Hui, Pei Yee, Yong Zhe, Mun Chun and
+                Kian Hun were students of the Data Science Department in TARUC, Tunku Abdul Rahman University College from the year 2022. Everyone put their best foot forwarrd and brainstormed to create an exemplary platform targeted at Malaysians with
+                consuming interests in PC. </p>
+        </div>
+    </article>
+
+    <article class="vid">
+        <video controls muted autoplay loop>
+                <source src="Img/aboutus/pcvideo.mp4" type="video/mp4">
+                Your browser does not support this video file.
+            </video>
+    </article>
+
+    <div class="title">
+        <h3 id="title">Founders</h3>
+        <img src="Img/aboutus/fd.png" alt="" id="founders" />
+    </div>
+    <article class="words">
+        <h2>Words of the Founders</h2>
+        <p>"Hello everyone, we welcome you to <strong style="color: #1239c5;">HEEZHUN TECH</strong>! Our services are currently only catered to the people who in Malaysia but feel free to take a look around. Who knows we might expand to oversea one day?
+            We won't forget to add discounts and promotions during Malaysia's celebration days such as Hari Raya, Deepavali and some more. So make sure to mark your calendars for these auspicious days."</p>
+    </article>
+
+
+</body>
+
+</html>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="Special_Promotions.html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+</html>

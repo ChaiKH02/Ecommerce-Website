@@ -1,0 +1,14 @@
+label,
+h2,
+article {
+    overflow: hidden;
+}
+
+blockquote {
+    height: 200px;
+}
+
+article {
+    overflow: hidden;
+    text-align: center;
+}

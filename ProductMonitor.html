@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN TECH</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="assgn_design.css" rel="stylesheet">
+    <link href="ProductMonitor.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="prodouctMonitor.js" defer></script>
+    <script src="currentUserEmail.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+    <script src="removeCart2.js" defer></script>
+
+</head>
+
+<body>
+
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>Monitor</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="specialpromo.html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>Monitor</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+    <div class="wrapper">
+        <!-- search product -->
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here..">
+            <button id="search" onclick="searchFilter()">Search</button>
+        </div>
+
+        <!-- filter button -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">ALL</button>
+            <button class="btn" onclick="filterSelection('student')">STUDENT</button>
+            <button class="btn" onclick="filterSelection('gaming')">GAMING</button>
+            <button class="btn" onclick="filterSelection('wfh')">WFH</button>
+            <p>VIEW AS :</p>
+            <button class="btnS" onclick="priceHighToLow('High To Low')">High To Low</button>
+            <button class="btnS" onclick="priceLowToHigh('Low To High')">Low To High</button>
+        </div>
+
+        <!-- display products here -->
+        <div id="products_list">
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/Dell_S3222DGM-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell S3222DGM</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1350.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 32 inches, 16:9 <br>
+                            Resolution: 2560 x 1440 @ 165 Hz <br>
+                            Panel Type: VA <br>
+                            Refresh Rate: 165 Hz <br>
+                            Response Time (GTG): 4ms <br>
+                            Adaptive-Sync: FreeSync Premium Pro 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell S3222DGM', '1350.00','img/product_monitor/gaming/Dell S3222DGM.jpeg')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/MSI_Optix_MPG321UR-QD-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>MSI Optix MPG321UR-QD</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4499.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 32 inches / 16:9 <br>
+                            Resolution: 4K<br>
+                            Panel Type: IPS  <br>
+                            Refresh Rate: 144 Hz <br>
+                            Response Time (GTG): 1ms <br>
+                            Adaptive-Sync: FreeSync & G-Sync Compatible
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Monoprice Dark Matter 42770', '4499.00','img/product_monitor/gaming/MSI_Optix_MPG321UR-QD-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/MSI_Optix_MAG274QRF-QD-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>MSI Optix MAG274QRF-QD</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2097.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 27 inches / 16:9 <br>
+                            Resolution: 2560 x 1440<br>
+                            Panel Type: IPS  <br>
+                            Refresh Rate: 165 Hz <br>
+                            Response Time (GTG): 1ms <br>
+                            Adaptive-Sync: G-Sync Compatible
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('MSI Optix MAG274QRF-QD', '2097.00','img/product_monitor/gaming/MSI_Optix_MAG274QRF-QD-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/Viotek_GNV34DBE-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Viotek GNV34DBE</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1819.90</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 34 inches, 21:9 <br>
+                            Resolution: 3440 x 1440<br>
+                            Panel Type: VA <br>
+                            Refresh Rate: 144 Hz <br>
+                            Response Time (GTG): 4ms <br>
+                            Adaptive-Sync: FreeSync
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Viotek GNV34DBE', '1819.90','img/product_monitor/gaming/Viotek_GNV34DBE-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/Monoprice_Dark_Matter_42770-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Monoprice Dark Matter 42770</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1799.90</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 25 inches, 16:9 <br>
+                            Resolution: 1920 x 1080 @ 165 Hz <br>
+                            Panel Type: IPS / W-LED, edge array <br>
+                            Refresh Rate: 144 Hz <br>
+                            Response Time (GTG): 1ms <br>
+                            Adaptive-Sync: FreeSync & G-Sync Compatible
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Monoprice Dark Matter 42770', '1799.90','img/product_monitor/gaming/Monoprice Dark Matter 42770.jpeg')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/Aorus_CV27Q-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Aorus CV27Q</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2328.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 27 inches, 16:9 <br>
+                            Resolution: 2560 x 1440<br>
+                            Panel Type: VA <br>
+                            Refresh Rate: 165 Hz <br>
+                            Response Time (GTG): 1ms <br>
+                            Adaptive-Sync: FreeSync Premium Pro
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Aorus CV27Q', '2328.00','img/product_monitor/gaming/Aorus_CV27Q-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products gaming">
+                <img src="img/product_monitor/gaming/Asus_ROG_Strix_XG279Q-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Asus ROG Strix XG279Q</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2668.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen Size & Aspect Ratio: 27 inches, 16:9 <br>
+                            Resolution: 2560 x 1440<br>
+                            Panel Type: IPS <br>
+                            Refresh Rate: 144Hz (170 Hz with overclock) <br>
+                            Response Time (GTG): 1ms <br>
+                            Adaptive-Sync: G-Sync Compatible
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Asus ROG Strix XG279Q', '2668.00','img/product_monitor/gaming/Asus_ROG_Strix_XG279Q-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/LG_25UM58-P-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>LG 25UM58-P</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">899.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 25-inch <br>
+                            Aspect ratio: 21:9 <br>
+                            Resolution: 2560 x 1080 <br>
+                            Response time: 5ms<br>
+                            Viewing angle: 178/178<br>
+                            Contrast ratio: 1M:1 (DFC)
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('LG 25UM58-P', '899.99','img/product_monitor/WFH/LG_25UM58-P-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="products student">
+                <img src="img/product_monitor/student/ASUS_VS228H-P_monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>ASUS VS228H-P monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">569.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 22-inch (1920 x 1080)<br>
+                            Ports: HDMI, DVI, VGA<br>
+                            Response time: 5ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Viewsonic VX2476-SH 24 IPS Monitor', '675.00','img/product_monitor/student/ASUS_VS228H-P_monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="products student">
+                <img src="img/product_monitor/student/AOC_C24G1_24_Curved_Frameless_Gaming_Monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>AOC C24G1 24 Curved Frameless Gaming Monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">699.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 24-inch (1920 x 1080)<br>
+                            Ports: VGA, HDMI x 2, DisplayPort<br>
+                            Response time: 1ms<br>
+                            Refresh rate: 144hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('AOC C24G1 24 Curved Frameless Gaming Monitor', '699.00','img/product_monitor/student/AOC_C24G1_24_Curved_Frameless_Gaming_Monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products student">
+                <img src="img/product_monitor/student/HP_Omen_Monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>HP Omen Monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1099.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 24.5-inch (1920 x 1080)<br>
+                            Ports: DisplayPort, HDMI, audio output, USB 3.0<br>
+                            Response time: 1ms<br>
+                            Refresh rate: 144hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('HP Omen Monitor', '1099.00','img/product_monitor/student/HP_Omen_Monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products student">
+                <img src="img/product_monitor/student/Viewsonic_VX2476-SH_24_IPS_Monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Viewsonic VX2476-SH 24 IPS Monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">675.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 24-inch (1920 x 1080)<br>
+                            Ports: HDMI 1.4, USB 3.1, DisplayPort and VGA inputs<br>
+                            Response time: 7ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Viewsonic VX2476-SH 24 IPS Monitor', '675.00','img/product_monitor/student/Viewsonic_VX2476-SH_24_IPS_Monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/Acer_V276HL-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Acer V276HL</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">719.82</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 27-inch <br>
+                            Aspect ratio: 16:9 <br>
+                            Resolution: 1920 x 1080 <br>
+                            Brightness: 300 cd/m2 <br>
+                            Response time: 6ms <br>
+                            Viewing angle: 178//178 <br>
+                            Contrast ratio: 100M:1 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Acer V276HL', '712.82','img/product_monitor/WFH/Acer_V276HL-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="products student">
+                <img src="img/product_monitor/student/Dell_P2219H_monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell P2219H monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1099.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 21.5-inch (1920 x 1080)<br>
+                            Ports: VGA, HDMI, DisplayPort, USB 3.0<br>
+                            Response time: 8ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell P2219H monitor', '1099.00','img/product_monitor/student/Dell_P2219H_monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products student">
+                <img src="img/product_monitor/student/Dell_SE2417HG_monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell SE2417HG monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">579.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 23.6-inch (1920 x 1080)<br>
+                            Ports: HDMI, audio-out, VGA<br>
+                            Response time: 2ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell SE2417HG monitor', '579.00','img/product_monitor/student/Dell_SE2417HG_monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="products student">
+                <img src="img/product_monitor/student/Dell_SE2416HX_monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell SE2416HX monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">650.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 23.8-inch (1920 x 1080)<br>
+                            Ports: HDMI, VGA<br>
+                            Response time: 6ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell SE2416HX monitor', '650.00','img/product_monitor/student/Dell_SE2416HX_monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/Dell_UltraSharp_UP3218K-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Dell UltraSharp UP3218K</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1078.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 32-inch <br>
+                            Aspect ratio: 16:9 <br>
+                            Resolution: 7,680 x 4,320 <br>
+                            Brightness: 400 cd/m2 <br>
+                            Response time: 6ms <br>
+                            Viewing angle: 178/178 <br>
+                            Contrast ratio: 1300:1 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Dell UltraSharp UP3218K', '1078.00','img/product_monitor/WFH/Dell_UltraSharp_UP3218K-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/Asus_Designo_Curve_MX38VC-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Asus Designo Curve MX38VC</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">1639.59</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 37.5-inch <br>
+                            Aspect ratio: 21:9 <br>
+                            Resolution: 3840 x 1600 <br>
+                            Brightness: 300 cd/m2 <br>
+                            Response time: 5ms <br>
+                            Viewing angle: 178/178 <br>
+                            Contrast ratio: 1000:1 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Asus Designo Curve MX38VC', '1639.59','img/product_monitor/WFH/Asus_Designo_Curve_MX38VC-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/BenQ_PD3200U-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>BenQ PD3200U</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">2961.00</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 32-inch <br>
+                            Aspect ratio: 16:9 <br>
+                            Resolution: 3840 x 2160 <br>
+                            Brightness: 300 cd/m2 <br>
+                            Response time: 4ms <br>
+                            Viewing angle: 178/178 <br>
+                            Contrast ratio: 1000:1 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('BenQ PD3200U', '2961.00','img/product_monitor/WFH/BenQ_PD3200U-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products student">
+                <img src="img/product_monitor/student/Asus_VS248H_monitor-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Asus VS248H monitor</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">699.90</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Display: 24-inch (1920 x 1080)<br>
+                            Ports: HDMI, DVI, VGA<br>
+                            Response time: 2ms<br>
+                            Refresh rate: 60hz
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Asus VS248H monitor', '699.90','img/product_monitor/student/Asus_VS248H_monitor-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/Asus_MB169B_Plus-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Asus MB169B Plus</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">810.99</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 15.6-inch <br>
+                            Aspect ratio: 16:9 <br>
+                            Resolution: 1920 x 1080 <br>
+                            Brightness: 200 cd/m2 <br>
+                            Response time: 4ms <br>
+                            Viewing angle: 160/160 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Asus MB169B Plus', '810.99','img/product_monitor/WFH/Asus_MB169B_Plus-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="products wfh">
+                <img src="img/product_monitor/WFH/MSI_Prestige_PS341WU-removebg-preview.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>MSI Prestige PS341WU</strong>
+                        <small class="unit"><br>RM</small>
+                        <small class="price">4156.29</small>
+                        <small>
+                            <br>Specifications: <br>
+                            Screen size: 27-inch <br>
+                            Aspect ratio: 21:9 <br>
+                            Resolution: 5120 x 2160 <br>
+                            HDMI inputs: HDMI 2.0 x 2<br>
+                            Display ports: DisplayPort v1.4 x 1<br>
+                            Viewing angle: 178//178 <br>
+                            USB-C: yes
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('MSI Prestige PS341WU', '4156.29','img/product_monitor/WFH/MSI_Prestige_PS341WU-removebg-preview.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="productKeyboard.html">Product</a></li>
+                    <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+
+</html>

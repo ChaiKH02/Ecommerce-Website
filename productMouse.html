@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <neta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HEEZHUN TECH</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="productM&K.css" rel="stylesheet">
+    <link href="assgn_design.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="productMouse.js" defer></script>
+    <script src="currentUserEmail.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="head_cart.js" defer></script>
+    <script src="removeCart2.js" defer></script>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>MOUSE & Mouse pads</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In</a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>MOUSE & Mouse pads</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+
+    <!-- small cart -->
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+            </div>
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!-- small cart -->
+    <div class="wrapper">
+        <!-- search product -->
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here..">
+            <button id="search" onclick="searchFilter()">Search</button>
+        </div>
+
+        <!-- filter button -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">ALL</button>
+            <button class="btn" onclick="filterSelection('wire')">WIRE</button>
+            <button class="btn" onclick="filterSelection('wireless')">WIRELESS</button>
+            <button class="btn" onclick="filterSelection('ambidextrous')">AMBIDEXTROUS</button>
+            <button class="btn" onclick="filterSelection('ergonomic')">ERGONOMIC</button>
+            <button class="btn" onclick="filterSelection('mousepads')">MOUSEPADS</button>
+            <p>VIEW AS :</p>
+            <button class="btnS" onclick="priceHighToLow('High To Low')">High To Low</button>
+            <button class="btnS" onclick="priceLowToHigh('Low To High')">Low To High</button>
+        </div>
+
+
+
+        <!-- display products here -->
+        <div id="products_list">
+            <div class="wire products">
+                <img src="img/product_mouse/LogitechM100R_P1.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Logitech M100R Mouse</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">17.90</small>
+                        <small>
+                            <br>
+                            A ambidextrous mouse that is simple and ready to tackle demanfds with no fuss. A pure simplicity at its best.
+                            Specifications: <br>
+                            Connectivity: Wired <br>
+                            Wired Connectivity: USB Type A
+                            Cord length: 180 cm <br>
+                            Power Source: Wired 
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Logitech M100R', '17.90', 'img/product_mouse/LogitechM100R_P1.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="ambidextrous products">
+                <img src="img/product_mouse/RazerViperMiniUltraLight_P2.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer Viper Mini Ultra Light</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">135.90</small>
+                        <small>
+                            Designed to push the limits of ultra-lightweight gaming, this will ensure absolute control belongs in the hands of gamers. <br>
+                            Specifications: <br>
+                            Connectivity: Wired <br>
+                            Wired Connectivity: USB Type A <br>
+                            Power Source: Wired <br>
+                            Type: Ambidextrous
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer Viper Mini Ultra Light', '135.90','img/product_mouse/RazerViperMiniUltraLight_P2.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="ergonomic products">
+                <img src="img/product_mouse/RazerBasilikXHyperSpeed_P3.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer Basilisk X HyperSpeed</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">145.90</small>
+                        <small>
+                            <br>
+                            High-speed transmission, lowest click latency, and seamless frequency switching, This mouse grants gamers the freedom and precision to perform. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Type: Ergonomic
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer Basilisk X HyperSpeed', '145.90', 'img/product_mouse/RazerBasilikXHyperSpeed_P3.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mousepad productsMP">
+                <img src="img/product_mouse/GloriousELEMENTmousepad(ICE)_P4.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Glorious Element Mousepad(Ice)</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">35.90</small>
+                        <small>
+                            <br>
+                            This special glass infused surface is ultra smooth, durable, and cool to touch. Provdes effortless speed without sacrificing precision. <br>
+                            Specifications: <br>
+                            Material: Glass-infuesed cloth surface and rubber base <br>
+                            Dimensions: 17x15 (38x43cm) <br>
+                            Thickness: 3.0mm
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Glorious ELEMENT MousePad(ICE)', '35.90','img/product_mouse/GloriousELEMENTmousepad(ICE)_P4.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="wireless products">
+                <img src="img/product_mouse/M170WirelessMouse_P5.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>M170 Wireless Mouse</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">49</small>
+                        <small>
+                            <br>
+                            Compact design and wireless, it fits well for those who works anywhere and tight and busy workspaces. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless(Bluetooth) <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Type: Ambidextrous
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('M170 Wireless Mouse', '49','img/product_mouse/M170WirelessMouse_P5.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mousepad productsMP">
+                <img src="img/product_mouse/LenovoIdeaPadGamingClothPad_P6.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Lenovo IdeaPad Gaming Pad</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">27</small>
+                        <small>
+                            <br>
+                            Thin, light with smooth water-resistant surface, it acts as a reliable gaming companions and help set off gamers' battle stations while on-the-go. <br>
+                            Specifications: <br>
+                            Material: Water-resistant cloth, rubber base
+                            Dimensions: 15.7" x 2.36" x 2.36" (4cm x 0.6cm x 0.6cm) <br>
+                            Thickness: Thin
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Lenovo IdeaPad Gaming Cloth Pad', '27', 'img/product_mouse/LenovoIdeaPadGamingClothPad_P6.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mousepad productsMP">
+                <img src="img/product_mouse/logitechStudioSeriesMpad_P7.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Logitech Studio Series Mousepad</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">49</small>
+                        <small>
+                            <br>
+                            With its soft, smooth and anti slip. Its gives you the glide and comfort you need while working. <br>
+                            Specifications: <br>
+                            Material: Recycled polyester, rubber base, nylon<br>
+                            Dimensions: 13.4" x 11" (34.04cm x 28cm)<br>
+                            Thickness: 0.04" (0.101 cm)
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Logitech Studio Series Mousepad', '49', 'img/product_mouse/logitechStudioSeriesMpad_P7.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mousepad productsMP">
+                <img src="img/product_mouse/RazerFireflyV2ChromaRGBMpad_P8.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer FireFly V2 Chrome Mousepad</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">120</small>
+                        <small>
+                            <br>
+                            Thinner. Brighter. Better. Turn it up and illuminate your battlestation with it designed for brilliant performance. <br>
+                            Specifications: <br>
+                            Material: Micro Textured, rubber base, all-round-edge lighting <br>
+                            Dimensions: Not stated<br>
+                            Thickness: Not stated
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer FireFly V2 Chrome RGB', '120', 'img/product_mouse/RazerFireflyV2ChromaRGBMpad_P8.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="ambidextrous products">
+                <img src="img/product_mouse/LenovoEssentialUSBMouse_P9.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Lenovo Essential USB Mouse</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">27</small>
+                        <small>
+                            <br>
+                            With a easy plug-and-play connection, this ambidextrous design provides a comfortable grip for all day comfort. <Br>
+                            Specifications: <br>
+                            Connectivity: Wired <br>
+                            USB Type: USB Type A <br>
+                            Power Source: Wired <br>
+                            Type: Ambidextrous
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Lenovo Essential USB', '27', 'img/product_mouse/LenovoEssentialUSBMouse_P9.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="wireless products">
+                <img src="img/product_mouse/Lenovo300WirelessCompactMouse_P10.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Lenovo 300 Compact Mouse</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">46</small>
+                        <small>
+                            <br>
+                            With its compact design and long-lasting battery life, it is perfect for those who wanted a greater control and freedom. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless(Bluetooth) <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Type: Ambidextrous
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Lenovo 300 Wireless Compact Mouse', '46','img/product_mouse/Lenovo300WirelessCompactMouse_P10.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="ambidextrous products">
+                <img src="img/product_mouse/logitechPebbleM350_P11.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Logitech Pebble M350</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">49</small>
+                        <small>
+                            <br>
+                            Minimalist, modern, silent. A portable mouse that fits your curated lifestyle and goes wherever life takes you. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless(Bluetooth) <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Type: Not stated
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Logitech Pebble M350', '49', 'img/product_mouse/logitechPebbleM350_P11.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="wire products">
+                <img src="img/product_mouse/LenovoIdeapadGamingM100_P12.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Lenovo Ideapad Gaming M100</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">70</small>
+                        <small>
+                            <br>
+                            High-performance combined with an ergonomic shape allows you to play for hours without discomfort. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless(Bluetooth) <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Design: Ergonomic
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Lenovo Ideapad Gaming M100', '70', 'img/product_mouse/LenovoIdeapadGamingM100_P12.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="ergonomic products">
+                <img src="img/product_mouse/RazerdeathAdderEssential_P13.png" alt="">
+                <div class="desc">
+                    <p>
+                        <strong>Razer DeathAdder Essential</strong>
+                        <small class="unit">RM</small>
+                        <small class="price">86</small>
+                        <small>
+                            <br>
+                            Sleek and distinct body designed for comfort, allowing you to maintain a high performance for long gaming marathons. <br>
+                            Specifications: <br>
+                            Connectivity: Wireless(Bluetooth) <br>
+                            USB Type: USE Type A <br>
+                            Power Source: Battery (AA) <br>
+                            Design: Ergonomic
+                        </small>
+                    </p>
+                    <p>
+                        <button class="add" onclick="cartAdd('Razer DeathAdder Essential', '86', 'img/product_mouse/RazerdeathAdderEssential_P13.png')">Add-cart</button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                    43-1,Jalan Indah,Taman Indah,45400,Selangor
+                    </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="productKeyboard.html">Product</a></li>
+                    <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+
+</html>

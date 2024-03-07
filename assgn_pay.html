@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEEZHUN PAYMENT</title>
+    <link rel="shortcut icon" href="Logo.png">
+    <link href="assgn_reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assgn_design.css">
+    <link href="pay_style.css" rel="stylesheet" />
+
+    <link href="assgn_print.css" rel="stylesheet" media="print" />
+    <!-- <link rel="stylesheet" href="pay.css"> -->
+    <script src="https://kit.fontawesome.com/ec2c1db2d8.js" crossorigin="anonymous"></script>
+    <script src="pay.js" defer></script>
+    <script src="cartNum.js" defer></script>
+    <script src="currentUserEmail.js" defer></script>
+    <script src="head_cart.js" defer></script>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mobile_nav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+    <div class="logo">
+        <a href="home.html"> <img src="img/logo/Logo.png" alt="logo"></a>
+        <div class="Mwebsite_name">
+            <h1>PAYMENT</h1>
+        </div>
+    </div>
+    <header class="member-navigation">
+
+
+        <div class="logInButton">
+            <a id="useremail" href="RegisterLogin.html">Log In </a>
+        </div>
+
+        <div class="logOutButton">
+            <a id="useremail" href="RegisterLogin.html">Log Out</a>
+        </div>
+
+        <div class="cartButton">
+            <a href="assgn_cart.html"><i class="fa-solid fa-cart-shopping cart" id="cart_icon"></i></a>
+        </div>
+
+        <div class="SignUpButton">
+            <a href="RegisterLogin.html">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="mobile_nav">
+        <li><a href="home.html">Home</a></li>
+        <li>
+            <ul class="Msubmenu_btn">
+                <a href="productKeyboard.html">Keyboard</a>
+                <a href="productMouse.html">Mice & Mousepad</a>
+                <a href="ProductAudio.html">Audio</a>
+                <a href="ProductMonitor.html">Monitor</a>
+                <a href="productPC.html">PC</a>
+            </ul>
+        </li>
+        <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+    </div>
+    <section class="navigation">
+        <div class="website_name">
+            <h1>PAYMENT</h1>
+        </div>
+        <div class="nav_bar">
+            <li><a href="home.html">Home</a></li>
+            <li class="submenu_btn">
+                <a href="#">Product</a>
+                <ul>
+                    <a href="productKeyboard.html">Keyboard</a>
+                    <a href="productMouse.html">Mice & Mousepad</a>
+                    <a href="ProductAudio.html">Audio</a>
+                    <a href="ProductMonitor.html">Monitor</a>
+                    <a href="productPC.html">PC</a>
+                </ul>
+            </li>
+            <li><a href="specialpromo.html">Special Promo</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+    </section>
+
+    <div class="wrap_cart">
+        <div class="smallcart">
+            <span class="closecart">&#215;</span>
+            <h3 class="titlecart">Your Cart</h3>
+            <hr>
+            <div class="head_cart_list">
+
+            </div>
+
+            <div class="cart_end">
+                <h3>Total</h3>
+                <hr>
+                <div class="total_amount">RM0</div>
+                <input type="button" class="clear" value="CLEAR" onclick="clearProduct()" />
+            </div>
+        </div>
+    </div>
+    <!--head cart end-->
+    <form action="tq.html" method="get">
+        <div class="row">
+            <div class="col1">
+                <article>
+                    <h2>Enter your contact information</h2><br>
+                    <div>
+                        <label for="fname">First name &#58;</label>
+                        <input name="fname" id="fname" type="text" required pattern="[A-Za-z]{1,32}" class="info1" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lname">Last name &#58;</label>
+                        <input name="lname" id="lname" type="text" required pattern="[A-Za-z]{1,32}" class="info1" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="phone">Phone number &#58;</label>
+                        <input name="phone" id="phone" type="tel" required placeholder="(012) 345-6789" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="info1" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="Email">E-mail &#40;optional&#41; &#58;</label>
+                        <input name="Email" id="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="info1-1" />
+                    </div>
+                    <br><br>
+                    <hr/>
+                    <h2>Enter your shipping information</h2><br>
+                    <div>
+                        <label for="address">Address &#58;</label>
+                        <input name="location" id="address" type="text" required class="info2" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="pcode">Postal Code &#58;</label>
+                        <input name="pcode" id="pcode" type="text" required pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" class="info2-1" />
+                    </div>
+                    <br><br>
+                    <hr/>
+                    <h2>Enter payment information</h2><br>
+                    <div class="box">
+                        <input name="pay" id="pay1" type="radio" checked/>
+                        <label for="pay1">Credit Card</label>
+                        <input name="pay" id="pay2" type="radio" />
+                        <label for="pay2">Paypal</label>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="c_name">Name on card &#58;</label>
+                        <input name="c_name" id="c_name" type="text" required pattern="[A-Za-z]{1,32}" class="info3" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="c_num">Credit Card number &#58;</label>
+                        <input name="c_num" id="c_num" type="tel" required pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" class="info3" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="exp_date">Expiration date &#58;</label>
+                        <input name="exp_date" id="exp_date" type="text" required maxlength="7" placeholder="MM/YY" pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" class="info3-1" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="cvv">Security code <img id="qmark" src="img/pay/question-mark.png" alt="question mark" />&#58;</label>
+                        <input name="cvv" id="cvv" type="tel" required maxlength="3" placeholder="CVV" pattern="(\d{3})" class="info3-1" />
+                        <div id="theModal" class="modal">
+                            <span class="close">&#215;</span>
+                            <img class="modal_img" id="cvv_img" src="img/pay/cvv.png" alt="CVV" />
+                            <div id="textbar">CVV</div>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="checkbox" required/>
+                    <span id="tick">Yes&#44; I read and accept the <a href="#">Terms and Conditions</a>&#44; <a href="#">Refund Policy</a> and <a href="#">Privacy Policy</a>&#8228;</span>
+                    <br><br>
+                    <div>
+                        <textarea name="comments" rows="5" cols="50" id="comments" placeholder="Enter your comment..."></textarea>
+                    </div>
+                    <br>
+                </article>
+            </div>
+            <div class="col2">
+                <article>
+                    <h2>Order Summary</h2>
+                    <hr/>
+                    <div class="order_sum">
+                        <table>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td class="pay_subtotal"></td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>RM7.00</td>
+                            </tr>
+                            <tr>
+                                <td>Taxes (6%)</td>
+                                <td class="pay_taxes"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td class="pay_total"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+                <hr>
+                <div id="col2-1">
+                    <article>
+                        <h2>Estimated Delivery Date</h2>
+                        <div id="deldate"></div>
+                        <div id="col2-2">
+                            <input type="submit" value="Place Order" />
+                        </div>
+                        <blockquote> Secure Checkout<br>Payment is always <br><strong><u>safe and secure</u></strong></blockquote><br>
+                        <img class="security" src="img/pay/mcafee.png" />
+                        <img class="security" src="img/pay/VeriSign.png" />
+                        <img class="security" src="img/pay/thawte.png" />
+                    </article>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+<footer>
+    <div class="footer_2div">
+        <div class="contactInfo">
+            <h3>
+                CONTACT INFO
+            </h3>
+            <hr/>
+            <ul>
+                <li style="list-style-image: url('img/footer image/call.png');"><a href="tel+60123456789"> 60123456789</a></li>
+                <li style="list-style-image: url('img/footer image/email.png');"><a href="mailto:heezhun@gmail.com"> heezhun@gmail.com</a></li>
+                <li style="list-style-image: url('img/footer image/location.png');">
+                    <address>
+                        43-1,Jalan Indah,Taman Indah,45400,Selangor
+                        </address>
+                    <br/>
+                </li>
+            </ul>
+            <div class="socialMedia">
+                <div class="fb-share-button" data-href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/ " data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FheezhunTech.facebook.com" class="fb-xfbml-parse-ignore"><img src="img/footer image/facebook.png" alt="facebook" width=24 height=24/></a>
+                    <a href="https://twitter.com/heezhun_tech?ref_src=twsrc%5Etfw" target="_blank"><img src="img/footer image/twitter.png" alt="twitter" /></a>
+                    <a href="http://www.instagram.com/heezhunTech" target="_blank"><img src="img/footer image/instagram.png" alt="instagram" width=24 height=24/></a>
+                    <a href="https://wa.me/60123456789?text=Get%20more%20information" target="_blank"><img src="img/footer image/whatsapp.png" alt="whatsapp" width=24 height=24/></a>
+                    <br/>Share and Follow Us!
+                </div>
+            </div>
+        </div>
+        <div class="quickLink">
+            <h3>QUICK LINK</h3>
+            <hr/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="productKeyboard.html">Product</a></li>
+                    <li><a href="Special_Promotions(added_MTstyle).html">Special Promo</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="footLogo">
+            <img src="img/logo/Logo.png" alt="logo" width=200 height=200/>
+        </div>
+        <p class="term">&#xA9 Heezhun Tech 2022 <a href="term.html">&nbsp;&nbsp;Privacy Policy and Terms </a></p>
+    </div>
+</footer>
+
+</html>
